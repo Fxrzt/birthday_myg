@@ -1,6 +1,6 @@
 <template>
-  <div class="flex items-center justify-center align-middle h-screen">
-    <section class="bg-blue-950">
+  <div class="flex items-center justify-center align-middle h-screen bg_pink">
+    <section class="bg-blue-950 rounded-xl">
         <!-- space-y-4 จะเพิ่ม margin-top ให้กับทุก element ลูกตัวที่สองลงไปเรื่อย ๆ -->
         <div class="p-6 space-y-6 border-2 border-solid border-indigo-500 ">
             <h1 class="text-xl font-bold text-white font_Mali">
@@ -35,6 +35,7 @@ export default {
     return {
       loginSuccess: false,
       loginTried: false,
+      errorMessage: 'username หรือ password ผิด กรุณากรอกใหม่อีกครั้งครับ',
       state: {
         user_name: '',
         pass_word: ''
@@ -51,18 +52,33 @@ export default {
       console.log(`Username:${this.state.user_name} Password:${this.state.pass_word}`)
       console.table({ user_name: this.state.user_name, pass_word: this.state.pass_word })
       this.loginTried = true
-      if (this.loginSuccess !== true) {
-        this.loginSuccess =
-        (this.state.user_name === this.pass_through.Puser_name &&
-            this.state.pass_word === this.pass_through.Ppass_word
-        )
+      this.loginSuccess =
+      (this.state.user_name === this.pass_through.Puser_name &&
+          this.state.pass_word === this.pass_through.Ppass_word
+      )
+      if (this.loginSuccess === true) {
         Swal.fire({
-          title: 'Drag me!',
-          icon: 'success',
-          draggable: true
+          title: 'Yes! I\'m Yours',
+          icon: 'success'
         })
+          .then(() => {
+            if (this.loginSuccess === true) {
+              this.$router.push('/welcome')
+            }
+          })
+          .catch(() => {
+            Swal.fire({
+              title: 'แจ้งเตือน',
+              text: this.errorMessage,
+              icon: 'error'
+            })
+          })
       } else {
-        console.log('error please enter password again')
+        Swal.fire({
+          title: 'แจ้งเตือน',
+          text: this.errorMessage,
+          icon: 'error'
+        })
       }
       console.log(`LoginTried:${this.loginTried} loginSuccess:${this.loginSuccess}`)
     }
@@ -70,9 +86,11 @@ export default {
 }
 </script>
 
-<style>
-body{
-    background-color: #ee9ca7;
-    /* #ffdde1 */
+<style scoped>
+/* body{
+  #ffdde1
+  } */
+.bg_pink{
+  background-color: #ee9ca7;
 }
 </style>
