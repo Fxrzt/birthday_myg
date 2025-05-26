@@ -18,4 +18,15 @@
   color: #2c3e50;
 }
 
+.font_Lobster_Two{
+    font-family: 'Lobster Two', sans-serif;
+}
+
+.font_Mali{
+    font-family: 'Mali', sans-serif;
+}
+.font_Sarabun{
+    font-family: 'Sarabun', sans-serif;
+}
+
 </style>

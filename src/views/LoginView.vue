@@ -6,14 +6,14 @@
             <h1 class="text-xl font-bold text-white font_Mali">
                 Sign in to your gift box
             </h1>
-            <form class="space-y-4 md:space-y-6 border-2 border-solid border-red-500" action="#">
+            <form class="space-y-4 md:space-y-6 border-2 border-solid border-red-500" @submit.prevent="handleSubmit">
                 <div>
                     <label for="email" class="block text-white font_Mali">Your heart</label>
-                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-sky-200 focus:border-sky-200 block w-full p-2.5 font_Mali" placeholder="name@company.com" required="">
+                    <input type="email" name="email" id="email" v-model="state.user_name" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-sky-200 focus:border-sky-200 block w-full p-2.5 font_Mali" placeholder="name@company.com" required="">
                 </div>
                 <div>
                     <label for="password" class="block text-white font_Mali">Password</label>
-                    <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-sky-200 focus:border-sky-200 block w-full p-2.5" required="">
+                    <input type="password" name="password" id="password" v-model="state.pass_word" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-sky-200 focus:border-sky-200 block w-full p-2.5" required="">
                 </div>
                 <!-- focus:ring-4 ขอบเงาวงกลม -->
                 <button type="submit" class="w-full text-black bg-sky-300 hover:bg-sky-200
@@ -27,8 +27,46 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2'
+
 export default {
-  name: 'LoginView'
+  name: 'LoginView',
+  data () {
+    return {
+      loginSuccess: false,
+      loginTried: false,
+      state: {
+        user_name: '',
+        pass_word: ''
+      },
+      pass_through: {
+        Puser_name: 'phanita@birth',
+        Ppass_word: '1234'
+      }
+    }
+  },
+  methods: {
+    handleSubmit () {
+      console.log('submit click!')
+      console.log(`Username:${this.state.user_name} Password:${this.state.pass_word}`)
+      console.table({ user_name: this.state.user_name, pass_word: this.state.pass_word })
+      this.loginTried = true
+      if (this.loginSuccess !== true) {
+        this.loginSuccess =
+        (this.state.user_name === this.pass_through.Puser_name &&
+            this.state.pass_word === this.pass_through.Ppass_word
+        )
+        Swal.fire({
+          title: 'Drag me!',
+          icon: 'success',
+          draggable: true
+        })
+      } else {
+        console.log('error please enter password again')
+      }
+      console.log(`LoginTried:${this.loginTried} loginSuccess:${this.loginSuccess}`)
+    }
+  }
 }
 </script>
 
@@ -36,15 +74,5 @@ export default {
 body{
     background-color: #ee9ca7;
     /* #ffdde1 */
-}
-.font_Lobster_Two{
-    font-family: 'Lobster Two', sans-serif;
-}
-
-.font_Mali{
-    font-family: 'Mali', sans-serif;
-}
-.font_Sarabun{
-    font-family: 'Sarabun', sans-serif;
 }
 </style>
