@@ -1,7 +1,8 @@
 <template>
   <div class="bg_img">
-    <section class="pt-32 p-4 border border-solid border-black">
-      <div class="grid grid-cols-12 gap-4 border border-solid border-red-500">
+    <NavComp></NavComp>
+    <section class="pt-14 p-4 border border-solid border-black">
+      <div class="grid grid-cols-12 gap-8 border border-solid border-red-500">
         <div class="col-start-3 col-span-8 bg-white font_Lobster_Two text-5xl font-medium block">
           <span class="font-semibold text-5xl">H</span>appy
         </div>
@@ -17,8 +18,13 @@
 </template>
 
 <script>
+import NavComp from './NavComp.vue'
+
 export default {
-  name: 'GhostFaceless'
+  name: 'GhostFaceless',
+  components: {
+    NavComp
+  }
 }
 </script>
 
@@ -32,4 +38,20 @@ export default {
   height: 100vh;                /* ✅ เต็มความสูงของหน้าจอ */
   width: 100%;                  /* ✅ เต็มความกว้าง */
 }
+
+/* 40rem (640px) */
+@media (width >= 40rem) {
+}
+
+/* 48rem (768px) */
+@media (width >= 48rem) {  }
+
+/* 64rem (1024px) */
+@media (width >= 64rem) {  }
+
+/* 80rem (1280px) */
+@media (width >= 80rem) {  }
+
+/* 96rem (1536px) */
+@media (width >= 96rem) {  }
 </style>
