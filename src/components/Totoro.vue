@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 .bg_img{
-  background-image: url('/src/assets/BackgroundImg/tumblr_1280.jpg'); /* Vue CLI ใช้ @ สำหรับ src */
+  background-image: url('/src/assets/BackgroundImg/62fb054849b58.jpg'); /* Vue CLI ใช้ @ สำหรับ src */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
