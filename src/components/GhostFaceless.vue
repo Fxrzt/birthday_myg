@@ -14,6 +14,9 @@
         </div>
       </div>
     </section>
+    <img src="../assets/imgGif/studio-ghibli.gif" class="min-w-2 img_png_girl pngMove" alt="My Girl Gif" />
+    <img src="../assets/imgGif/ghost.gif" class="min-w-2 max-w-32 img_png_ghost" alt="My Ghost Gif" />
+    <img src="../assets//imgGif//200w (1).gif" class="min-w-2 max-w-20 img_png_friend" alt="My Friend Gif" />
   </div>
 </template>
 
@@ -38,6 +41,48 @@ export default {
   height: 100vh;                /* ✅ เต็มความสูงของหน้าจอ */
   width: 100%;                  /* ✅ เต็มความกว้าง */
 }
+/* #region PNG Girl Animation */
+.img_png_girl{
+  position: relative; /* ต้องใช้ position เพื่อให้ left ทำงาน */
+  top: 41%;
+  left: -32%;
+  pointer-events: none; /* ป้องกันการคลิก */
+  z-index: 1;
+}
+
+.pngMove{
+    animation: pngMove 5s ease-in-out infinite; /* ใช้ Animation */
+  }
+
+  @keyframes pngMove {
+    0% {
+      left: -32%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+/* #endregion */
+
+/* #region PNG Ghost Animation */
+.img_png_ghost{
+  position: relative; /* ต้องใช้ position เพื่อให้ left ทำงาน */
+  top: 21%;
+  left: 20%;
+  pointer-events: none; /* ป้องกันการคลิก */
+  z-index: 0;
+}
+/* #endregion */
+
+/* #region PNG Friend Animation */
+.img_png_friend{
+  position: relative; /* ต้องใช้ position เพื่อให้ left ทำงาน */
+  top: -38%;
+  left: 65%;
+  pointer-events: none; /* ป้องกันการคลิก */
+  z-index: 0;
+}
+/* #endregion */
 
 /* 40rem (640px) */
 @media (width >= 40rem) {

@@ -1,9 +1,10 @@
 <template>
-  <nav class="w-full h-16 flex items-center justify-between px-4 bg-white/30 backdrop-blur-sm">
+  <nav class="w-full h-20 flex items-center justify-between px-4 bg-white/30 backdrop-blur-sm">
     <div class="flex items-center justify-center align-middle border border-solid border-red-500">
-      <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+      <h1 class="font_Lobster_Two text-3xl">GavynMiles</h1>
     </div>
     <div class="flex items-center justify-center align-middle border border-solid border-gray-950">
+      <button class="font_Lobster_Two text-2xl">logout</button>
     </div>
   </nav>
 </template>
