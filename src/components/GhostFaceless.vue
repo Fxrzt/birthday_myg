@@ -1,5 +1,5 @@
 <template>
-  <div class="bg_img">
+  <div class="bg_img" >
     <NavComp></NavComp>
     <section class="pt-14 p-4 border border-solid border-black">
       <div class="grid grid-cols-12 gap-8 border border-solid border-red-500">
@@ -34,17 +34,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .bg_img{
-  background-image: url('/src/assets/BackgroundImg/tumblr_1280.jpg'); /* Vue CLI ใช้ @ สำหรับ src */
+  background-image: url('@/assets/BackgroundImg/tumblr_1280.jpg'); /* Vue CLI ใช้ @ สำหรับ src */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;                /* ✅ เต็มความสูงของหน้าจอ */
   width: 100%;                  /* ✅ เต็มความกว้าง */
+  overflow: hidden;
+  position: relative; /* เพิ่มบรรทัดนี้ */
 }
 /* #region PNG Girl Animation */
 .img_png_girl{
-  position: relative; /* ต้องใช้ position เพื่อให้ left ทำงาน */
-  top: 41%;
+  position: absolute; /* ต้องใช้ position เพื่อให้ left ทำงาน */
+  top: 80%;
   left: -32%;
   pointer-events: none; /* ป้องกันการคลิก */
   z-index: 1;
@@ -67,7 +69,7 @@ export default {
 /* #region PNG Ghost Animation */
 .img_png_ghost{
   position: relative; /* ต้องใช้ position เพื่อให้ left ทำงาน */
-  top: 21%;
+  top: 42%;
   left: 20%;
   pointer-events: none; /* ป้องกันการคลิก */
   z-index: 0;
@@ -76,9 +78,9 @@ export default {
 
 /* #region PNG Friend Animation */
 .img_png_friend{
-  position: relative; /* ต้องใช้ position เพื่อให้ left ทำงาน */
-  top: -38%;
-  left: 65%;
+  position: absolute; /* ต้องใช้ position เพื่อให้ left ทำงาน */
+  top: 42%;
+  left: 64%;
   pointer-events: none; /* ป้องกันการคลิก */
   z-index: 0;
 }

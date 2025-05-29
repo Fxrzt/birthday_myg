@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
+  <div class="home overflow-hidden">
     <GhostFaceless></GhostFaceless>
-    <section class="bg-black" style="height: 5vh;"></section>
     <TotoroComponent></TotoroComponent>
   </div>
 </template>
@@ -9,6 +8,7 @@
 <script>
 // @ is an alias to /src
 import GhostFaceless from '@/components/GhostFaceless.vue'
+// import ImgSlide from '@/components/ImgSlide.vue'
 import TotoroComponent from '@/components/Totoro.vue'
 
 export default {
@@ -16,6 +16,7 @@ export default {
   components: {
     GhostFaceless,
     TotoroComponent
+    // ,ImgSlide
   }
 }
 </script>
