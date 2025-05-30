@@ -4,6 +4,10 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import './assets/tailwind.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+
+Vue.use(VueAwesomeSwiper) // ← นี่คือจุดที่ "ใช้" VueAwesomeSwiper
 
 Vue.config.productionTip = false
 
