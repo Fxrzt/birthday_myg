@@ -9,14 +9,20 @@
       :spaceBetween="10"
     >
       <SwiperSlide>
+        <div class="">
           <img src="@/assets/CardsEffect/81F3F6EA-1018-43EC-8BE5-A15B7B78FD4B.jpg" class="w-full h-full object-cover rounded-xl" />
-        </SwiperSlide>
-        <SwiperSlide>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div class="">
           <img src="@/assets/CardsEffect/81F3F6EA-1018-43EC-8BE5-A15B7B78FD4B.jpg" class="w-full h-full object-cover rounded-xl" />
-        </SwiperSlide>
-        <SwiperSlide>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div class="">
           <img src="@/assets/CardsEffect/81F3F6EA-1018-43EC-8BE5-A15B7B78FD4B.jpg" class="w-full h-full object-cover rounded-xl" />
-        </SwiperSlide>
+        </div>
+      </SwiperSlide>
 
     </Swiper>
   </div>
@@ -50,29 +56,20 @@ export default {
 </script>
 
 <style scoped>
-/* .mySwiper {
-  width: 100%;
-  max-width: 400px; ขนาด container
-  height: 400px; ความสูงของ Swiper
-  margin: auto;
-} */
-/* .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .mySwiper {
-  width: 300px;
+  width: 100%;
+  /* ขนาด container */
+  max-width: 250px;
+  /* ความสูงของ Swiper */
   height: 400px;
+  margin: auto;
 }
 .swiper-slide {
-  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 24px;
 }
 
