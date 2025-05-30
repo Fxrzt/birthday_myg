@@ -1,12 +1,13 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
 </template>
 
+<script>
+</script>
+
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif+Thai:wght@100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,16 +16,24 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+html {
+  scroll-behavior: smooth;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.font_Lobster_Two{
+    font-family: 'Lobster Two', sans-serif;
+}
+
+.font_Mali{
+    font-family: 'Mali', sans-serif;
+}
+.font_Sarabun{
+    font-family: 'Sarabun', sans-serif;
 }
 </style>
