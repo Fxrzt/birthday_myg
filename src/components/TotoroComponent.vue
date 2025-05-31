@@ -36,7 +36,6 @@ export default {
   background-repeat: no-repeat;
   height: 100vh;                /* ✅ เต็มความสูงของหน้าจอ */
   width: 100%;                  /* ✅ เต็มความกว้าง */
-  border: 2px solid red;
   overflow: hidden; /* บังคับไม่ให้ลูกล้นออกมา */
   position: relative; /* เพิ่มบรรทัดนี้ */
 }

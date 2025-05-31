@@ -2,11 +2,11 @@
   <div class="flex items-center justify-center align-middle h-screen bg_pink">
     <section class="bg-blue-950 rounded-xl">
         <!-- space-y-4 จะเพิ่ม margin-top ให้กับทุก element ลูกตัวที่สองลงไปเรื่อย ๆ -->
-        <div class="p-6 space-y-6 border-2 border-solid border-indigo-500 ">
+        <div class="p-6 space-y-6 ">
             <h1 class="text-xl font-bold text-white font_Mali">
                 Sign in to your gift box
             </h1>
-            <form class="space-y-4 md:space-y-6 border-2 border-solid border-red-500" @submit.prevent="handleSubmit">
+            <form class="space-y-4 md:space-y-6" @submit.prevent="handleSubmit">
                 <div>
                     <label for="email" class="block text-white font_Mali">Your heart</label>
                     <input type="email" name="email" id="email" v-model="state.user_name" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-sky-200 focus:border-sky-200 block w-full p-2.5 font_Mali" placeholder="name@company.com" required="">
