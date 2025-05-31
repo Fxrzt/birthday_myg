@@ -1,5 +1,19 @@
 <template>
-  <div class="bg_img" >
+  <div class="bg_img pt-32 px-5" >
+    <div class="bg-white/30 backdrop-blur-md font_Mali text-white text-lg text-wrap py-3 px-2 rounded-lg w-full">
+      <div class="block flex items-center justify-center align-middle">
+        <p class="">สุขสันต์วันเกิดนะที่รัก 💖</p>
+      </div>
+      <div class="block flex items-center justify-center align-middle">
+        <p class="">ขอให้วันนี้เป็นวันที่เต็มไปด้วยความสุข และรอยยิ้ม</p>
+      </div>
+      <div class="block flex items-center justify-center align-middle">
+        <p class="">ขอให้เธอสมหวังในทุกสิ่งที่ตั้งใจ มีสุขภาพแข็งแรง และขอให้ถูกรางวัลที่ 1 นะจ๊ะ</p>
+      </div>
+      <div class="block flex items-center justify-center align-middle">
+        <p class="">รักเธอเสมอนะ 💕</p>
+      </div>
+    </div>
     <img src="../assets/imgGif/ดาวน์โหลด.gif" class="max-w-44 img_png_cat_bus pngMove" alt="My Cat Bus Gif" />
     <img src="../assets/imgGif/d5o2bsr-1336ebb8-1235-415d-b7ed-225f1b544e82.gif" class="max-w-20 img_png_blue_totoro" alt="My Blue Totoro Gif" />
     <img src="../assets//imgGif/bd7b2e6d9f24b7bf4f1ee543a0e4d376.gif" class="max-w-28 img_png_black_cat" alt="My Black Cat Gif" />
@@ -68,8 +82,8 @@ export default {
 
 .img_png_black_cat{
   position: absolute; /* ต้องใช้ position เพื่อให้ left ทำงาน */
-  top: 83%;
-  left: 3%;
+  top: 88%;
+  left: -2%;
   pointer-events: none; /* ป้องกันการคลิก */
   z-index: 0;
 }

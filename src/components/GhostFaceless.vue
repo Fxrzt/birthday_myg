@@ -1,15 +1,16 @@
 <template>
   <div class="bg_img" >
     <NavComp></NavComp>
-    <section class="pt-14 p-4 border border-solid border-black">
-      <div class="grid grid-cols-12 gap-8 border border-solid border-red-500">
-        <div class="col-start-3 col-span-8 bg-white font_Lobster_Two text-5xl font-medium block">
+    <section class="pt-14 p-4 flex items-center justify-center align-middle">
+      <!-- style="color: #1a2a6c;" #1a1a1a #2c3e50 #7b1fa2 #8e24aa #b71c1c #2d2d2d #3c3c3c หรือ #4a4a4a #2c3e50-->
+      <div class=" bg-white/30 backdrop-blur-md text-white text-lg rounded-lg py-7 px-10" style="color: #2c3e50;">
+        <div class=" font_Lobster_Two text-5xl font-medium block py-1">
           <span class="font-semibold text-5xl">H</span>appy
         </div>
-        <div class="col-start-3 col-span-8 bg-white font_Lobster_Two text-5xl font-medium block">
+        <div class=" font_Lobster_Two text-5xl font-medium block py-1">
           <span class="font-semibold text-5xl">B</span>irthday
         </div>
-        <div class="col-start-3 col-span-8 bg-white font_Lobster_Two text-5xl font-medium block">
+        <div class=" font_Lobster_Two text-5xl font-medium block py-1">
           <span class="font-semibold text-5xl">K'</span>Phanita
         </div>
       </div>

@@ -1,41 +1,58 @@
 <template>
-  <div class="bg_img">
-    <Swiper
-      :effect="cards"
-      :grab-cursor="true"
+  <div class="bg_img pt-40 px-20 ">
+    <div class="bg-white/30 backdrop-blur-md font_Mali text-white text-xl rounded-lg mb-7 p-3" >
+      <h2>💝 ... Our Album ... 💕</h2>
+    </div>
+    <swiper
+      :effect="'cards'"
+      :grabCursor="true"
       :modules="modules"
+      :cardsEffect="{ slideShadows: false }"
       class="mySwiper"
-      :slidesPerView="1"
-      :spaceBetween="10"
     >
-      <SwiperSlide>
-        <div class="">
-          <img src="@/assets/CardsEffect/81F3F6EA-1018-43EC-8BE5-A15B7B78FD4B.jpg" class="w-full h-full object-cover rounded-xl" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div class="">
-          <img src="@/assets/CardsEffect/81F3F6EA-1018-43EC-8BE5-A15B7B78FD4B.jpg" class="w-full h-full object-cover rounded-xl" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div class="">
-          <img src="@/assets/CardsEffect/81F3F6EA-1018-43EC-8BE5-A15B7B78FD4B.jpg" class="w-full h-full object-cover rounded-xl" />
-        </div>
-      </SwiperSlide>
-
-    </Swiper>
+      <swiper-slide >
+        <img class="rounded-lg w-full h-96 object-cover" src="@/assets/CardsEffect/4.jpg" height="100%">
+      </swiper-slide>
+      <swiper-slide >
+        <img class="rounded-lg w-full h-96 object-cover" src="@/assets/CardsEffect/2.jpg" height="100%">
+      </swiper-slide>
+      <swiper-slide >
+        <img class="rounded-lg w-full h-96 object-cover" src="@/assets/CardsEffect/6.jpg" height="100%">
+      </swiper-slide>
+      <swiper-slide >
+        <img class="rounded-lg w-full h-96 object-cover" src="@/assets/CardsEffect/1.jpg" height="100%">
+      </swiper-slide>
+      <swiper-slide >
+        <img class="rounded-lg w-full h-96 object-cover" src="@/assets/CardsEffect/5.jpg" height="100%">
+      </swiper-slide>
+      <swiper-slide >
+        <img class="rounded-lg w-full h-96 object-cover" src="@/assets/CardsEffect/3.jpg" height="100%">
+      </swiper-slide>
+      <swiper-slide >
+        <img class="rounded-lg w-full h-96 object-cover" src="@/assets/CardsEffect/8.jpg" height="100%">
+      </swiper-slide>
+      <swiper-slide >
+        <img class="rounded-lg w-full h-96 object-cover" src="@/assets/CardsEffect/7.jpg" height="100%">
+      </swiper-slide>
+    </swiper>
+    <img src="../assets/imgGif/ดาวน์โหลด.gif" class="max-w-44 img_png_cat_bus pngMove" alt="My Cat Bus Gif" />
+    <img src="../assets/imgGif/d5o2bsr-1336ebb8-1235-415d-b7ed-225f1b544e82.gif" class="max-w-20 img_png_blue_totoro" alt="My Blue Totoro Gif" />
+    <img src="../assets//imgGif/200w.gif" class="max-w-36 img_png_totoro_jump" alt="My Totoro Gif" />
+    <img src="../assets//imgGif//200w (1).gif" class="min-w-2 max-w-20 img_png_friend" alt="My Friend Gif" />
   </div>
 </template>
 
 <script>
+// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/css'
-import 'swiper/css/effect-cards'
-import { EffectCards } from 'swiper/modules'
 
-// import styles bundle
-import 'swiper/css/bundle'
+// Import Swiper styles
+import 'swiper/css'
+
+import 'swiper/css/effect-cards'
+
+// import required modules
+import { EffectCards } from 'swiper/modules'
 
 export default {
   name: 'ImgSlide',
@@ -43,14 +60,13 @@ export default {
     return {
     }
   },
-  components: {
-    Swiper,
-    SwiperSlide
-  },
   setup () {
     return {
-      modules: [EffectCards]
+      modules: [EffectCards] // ใช้โมดูล EffectCards
     }
+  },
+  components: {
+    Swiper, SwiperSlide
   }
 }
 </script>
@@ -58,19 +74,7 @@ export default {
 <style scoped>
 .mySwiper {
   width: 100%;
-  /* ขนาด container */
-  max-width: 250px;
-  /* ความสูงของ Swiper */
-  height: 400px;
-  margin: auto;
-}
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  font-size: 24px;
+  height: 100%; /* กำหนดขนาดที่เพียงพอสำหรับการแสดงผล */
 }
 
 .bg_img{
@@ -83,4 +87,52 @@ export default {
   overflow: hidden;
   position: relative; /* เพิ่มบรรทัดนี้ */
 }
+
+/* #region PNG Girl Animation */
+.img_png_cat_bus{
+  position: absolute; /* ต้องใช้ position เพื่อให้ left ทำงาน */
+  top: 71%;
+  left: 110%;
+  pointer-events: none; /* ป้องกันการคลิก */
+  z-index: 1;
+}
+
+.pngMove{
+    animation: pngMove 3s ease-in-out infinite; /* ใช้ Animation */
+  }
+
+  @keyframes pngMove {
+    0% {
+      left: 110%;
+    }
+    100% {
+      left: -45%;
+    }
+  }
+/* #endregion */
+
+.img_png_totoro_jump{
+  position: absolute; /* ต้องใช้ position เพื่อให้ left ทำงาน */
+  top: 83%;
+  left: 4%;
+  pointer-events: none; /* ป้องกันการคลิก */
+  z-index: 0;
+}
+
+.img_png_blue_totoro{
+  position: absolute; /* ต้องใช้ position เพื่อให้ left ทำงาน */
+  top: 81%;
+  left: 56%;
+  pointer-events: none; /* ป้องกันการคลิก */
+  z-index: 0;
+}
+
+.img_png_friend{
+  position: absolute; /* ต้องใช้ position เพื่อให้ left ทำงาน */
+  top: 7%;
+  left: 78%;
+  pointer-events: none; /* ป้องกันการคลิก */
+  z-index: 0;
+}
+
 </style>
